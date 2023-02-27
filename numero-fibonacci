@@ -2,27 +2,35 @@
 
 using namespace std;
 
+
+// Valor lógico que indica se o número digitado foi encontrado na sequência
 bool encontrado = false; 
 
+
+// A função verifica se o número digitado pertence a sequência. 
 float VerificaFibonacci(int n){
+    
     
     int pass = 0; 
     int atual = 0; 
     int soma = 0; 
-    
+
+    // Faz a soma dos 2 valores anteriores enquanto a soma não ultrapassa o valor digitado
     while(soma <= n){
         
+        // Calcula a sequência de Fibonacci
         soma = pass + atual; 
         pass = atual; 
         atual = soma; 
         
+        // Se o número digitado for encontrado imprime a mensagem e retorna true
         if(atual == n){
             cout << atual << " ";
             cout << endl << "Faz parte da sequência!"; 
             encontrado = true; 
             return encontrado; 
         }
-        
+        // Inicializa a sequência já que as variáveis iniciam com 0 que também faz parte da sequência  
         if(atual == 0){
             cout << atual << " ";
             atual = 1; 
@@ -35,12 +43,15 @@ float VerificaFibonacci(int n){
 
 int main(){
     
+    // Pede o valor para fazer a verficação
     int numero; 
     cout << "Digite um valor: ";
     cin >> numero; 
     
+    // Chama a função que ver se o número digitado faz parte da sequência. 
     VerificaFibonacci(numero); 
     
+    // Se o número não fazer parte da sequência imprime a mensagem para o usuário
     if(encontrado == false){
         cout << endl << "Não faz parte da sequência!"; 
     }
