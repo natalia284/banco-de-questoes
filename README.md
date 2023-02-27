@@ -1,2 +1,2 @@
 # banco-de-questoes
-O código presente nesse repositório verifica se um número digitado pelo usuário pertence ou não a sequência de Fibonacci.
+Os códigos são referentes aos desafios de programação para vaga de estagio.
