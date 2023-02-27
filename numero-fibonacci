@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+bool encontrado = false; 
+
+float VerificaFibonacci(int n){
+    
+    int pass = 0; 
+    int atual = 0; 
+    int soma = 0; 
+    
+    while(soma <= n){
+        
+        soma = pass + atual; 
+        pass = atual; 
+        atual = soma; 
+        
+        if(atual == n){
+            cout << atual << " ";
+            cout << endl << "Faz parte da sequência!"; 
+            encontrado = true; 
+            return encontrado; 
+        }
+        
+        if(atual == 0){
+            cout << atual << " ";
+            atual = 1; 
+        }
+        
+        cout << atual << " ";
+        
+    }
+}
+
+int main(){
+    
+    int numero; 
+    cout << "Digite um valor: ";
+    cin >> numero; 
+    
+    VerificaFibonacci(numero); 
+    
+    if(encontrado == false){
+        cout << endl << "Não faz parte da sequência!"; 
+    }
+    
+    return 0;
+}
