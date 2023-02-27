@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    
+    // Armazena os valores
+    float sp = 67836.43;
+    float rj = 36678.66; 
+    float mg = 29229.88; 
+    float es = 27165.48; 
+    float outros = 19849.53; 
+    
+    // Soma o total e calcula a porcentagem de cada estado
+    float total = sp + rj + mg + es + outros; 
+    
+    float p_sp = (sp * 100) / total; 
+    float p_rj = (rj * 100) / total; 
+    float p_mg = (mg * 100) / total; 
+    float p_es = (es * 100) / total; 
+    float p_outros = (outros * 100) / total; 
+    
+    //Imprime os valores
+    cout << "Porcentagem SP: "<< p_sp << " %"<< endl;  
+    cout << "Porcentagem RJ: "<< p_rj << " %"<< endl; 
+    cout << "Porcentagem MG: "<< p_mg << " %"<< endl; 
+    cout << "Porcentagem ES: "<< p_es << " %"<< endl; 
+    cout << "Porcentagem Outros: "<< p_outros << " %"<< endl; 
+    
+    return 0;
+}
