@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main (){
+    
+    char palavra[30];
+    char nova[30]; 
+    int i; 
+
+    cout << "Digite uma palavra: ";
+    cin.getline(palavra, 30);
+    
+    // O for inverte a palavra através de posição por posição 
+    cout << "Palavra invertida: ";
+    for(i = 30; i >=0; i--){
+        
+        nova[i] = palavra[i]; 
+        cout << nova[i]; 
+    }
+    
+    return 0; 
+}
